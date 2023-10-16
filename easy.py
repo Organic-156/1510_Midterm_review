@@ -14,3 +14,24 @@ You must provide a full docstring for this function including all pre- and post-
 You must create two useful and different doctests for this function.
 No main function is required.
 """
+
+
+def count_evens(readings):
+
+    my_list = []
+
+    even_count = 0
+    even_sum = 0
+
+    for num in readings:
+        if num % 2 == 0:
+            even_count += 1
+            even_sum += num
+
+    my_list.append(even_count)
+    my_list.append(even_sum)
+    return tuple(my_list)
+
+
+sample_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(count_evens(sample_list))
