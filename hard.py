@@ -46,3 +46,37 @@ Prove your function works in the docstring with these doctests:
 
 No main function is required.
 """
+
+
+def is_valid_parity(codeword, parity):
+    is_even = True
+    count_of_1s = 0
+
+    for letter in codeword:
+        if letter == "1":
+            count_of_1s += 1
+
+    if (count_of_1s % 2) != 0:
+        is_even = False
+
+    if parity == "EVEN" and is_even:
+        return True
+    elif parity == "ODD" and not is_even:
+        return True
+    else:
+        is_valid = False
+
+    return is_valid
+
+print(is_valid_parity("101", "EVEN"))# returns True
+print(is_valid_parity("11", "EVEN")) #returns True
+print(is_valid_parity("111111111100000000001010110101", "EVEN")) #returns True
+print(is_valid_parity("10", "ODD")) #returns True
+print(is_valid_parity("111", "ODD")) #returns True
+print(is_valid_parity("1111111111000011111000001010110101", "ODD")) #returns True
+print(is_valid_parity("111", "EVEN")) #returns False
+print(is_valid_parity("11111111100000000001010110101", "EVEN")) #returns False
+print(is_valid_parity("11", "ODD")) #returns False
+print(is_valid_parity("101", "ODD")) #returns False
+print(is_valid_parity("11111111111000011111000001010110101", "ODD")) #returns False
+
