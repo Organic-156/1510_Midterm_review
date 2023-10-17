@@ -64,9 +64,8 @@ def is_valid_parity(codeword, parity):
     elif parity == "ODD" and not is_even:
         return True
     else:
-        is_valid = False
+        return False
 
-    return is_valid
 
 print(is_valid_parity("101", "EVEN"))# returns True
 print(is_valid_parity("11", "EVEN")) #returns True
