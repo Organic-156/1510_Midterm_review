@@ -28,9 +28,8 @@ def count_evens(readings):
             even_count += 1
             even_sum += num
 
-    my_list.append(even_count)
-    my_list.append(even_sum)
-    return tuple(my_list)
+    user_tuple = (even_count, even_sum)
+    return user_tuple
 
 
 sample_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
